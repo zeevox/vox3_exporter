@@ -1,0 +1,9 @@
+services:
+  vox3-exporter:
+    build:
+      context: .
+    container_name: vox3-exporter
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "9917:9917"
